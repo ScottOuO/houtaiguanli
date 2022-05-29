@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "esnext",
+    "baseUrl": "./",
+    "moduleResolution": "node",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    },
+    //问题的描述是：TypeScript智能感知在模板中是禁用的，你可以在tsconfig或jsconfig中配置’ “jsx”: "preserve"来启用它，
+    //或者配置’ vueCompilerOptions '。 
+    //使用experimentalDisableTemplateSupport来禁用这个提示。那么我们根据描述解决问题
+    "jsx": "preserve",
+
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable",
+      "scripthost"
+    ]
+  }
+}
